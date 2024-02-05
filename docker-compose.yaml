@@ -1,7 +1,10 @@
 version: '3.9'
 
 services:
-  web:
-    image: "node-app-todo:latest"
-    ports:
-      - "8000:8000"
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      image: "node-app-todo:latest"
+      ports:
+        - "8000:8000"
